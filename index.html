@@ -1,74 +1,256 @@
-<!DOCTYPE html>
+<style>
+
+#top {
+  width:100%;
+	height:450px;
+	position:absolute;
+	background-color:white;
+	margin:-8px -8px;
+	z-index:2;
+}
+
+#btm{
+	width:100%;
+	height:100%;
+	position:absolute;
+	background-color:dddcdc;
+	margin:450px 0px 0px -8px;
+	-moz-box-shadow:    0px 0px 5px 6px #c6c6c5;
+	-webkit-box-shadow: 0px 0px 5px 6px #c6c6c5;
+	box-shadow:         0px 0px 5px 6px #aeaeae;
+}
+
+#lne {
+	width:100%;
+	height:8px;
+	background:url(./shade.png);
+	position:absolute;
+	margin:442px -8px;
+	z-index:3;
+}
+
+#home{
+	margin-left:-480px;
+	left:50%;
+	width:200px;
+	height:42px;
+	background:url(./topLogo.png);
+	position:absolute;
+	z-index:3;
+}
+
+#games{
+	margin:8px 0px 0px -184px;
+	left:50%;
+	width:100px;
+	height:31px;
+	background-color:#dbe4b4;
+	position:absolute;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 300ms;
+	opacity:.7;
+	z-index:3;
+	text-decoration:none;
+	color:white;
+	text-align:center;
+	font-size:25px;
+	font-family:"Myriad Pro","Helvetica Neue","Helvetica";
+	font-style:bold;
+	padding:4px 0px;
+	
+}
+
+#games:hover{
+	background-color:#89ae02;
+}
+
+#games:active{
+	background-color:#89ae02;
+	opacity:1;
+}
+
+#gamesline{
+	margin:-8px -8px;
+	width:100%;
+	height:464px;
+	background-color:#89ae02;
+	position:absolute;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 1000ms;
+	opacity:0;
+
+}
+
+#gamesline:target{
+	background-color:#89ae02;
+	opacity:1;
+	z-index:1;
+}
+
+#about{
+	margin:8px 0px 0px -76px;
+	left:50%;
+	width:100px;
+	height:31px;
+	background-color:#eebdd2;
+	position:absolute;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 300ms;
+	opacity:.7;
+	z-index:3;
+	text-decoration:none;
+	color:white;
+	text-align:center;
+	font-size:25px;
+	font-family:"Myriad Pro","Helvetica Neue","Helvetica";
+	font-style:bold;
+	padding:4px 0px;
+	
+}
+
+#about:hover{
+	background-color:#c61a69;
+}
+
+#about:active{
+	background-color:#c61a69;
+	opacity:1;
+}
+
+#aboutline{
+	margin:-8px -8px;
+	width:100%;
+	height:464px;
+	background-color:#c61a69;
+	position:absolute;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 1000ms;
+	opacity:0;
+}
+
+#aboutline:target{
+	background-color:#c61a69;
+		z-index:1;
+		opacity:1;
+}
+
+#archive{
+	margin:8px 0px 0px 32px;
+	left:50%;
+	width:100px;
+	height:31px;
+	background-color:#fef1d2;
+	position:absolute;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 300ms;
+	opacity:.7;
+	z-index:3;
+	text-decoration:none;
+	color:white;
+	text-align:center;
+	font-size:25px;
+	font-family:"Myriad Pro","Helvetica Neue","Helvetica";
+	font-style:bold;
+	padding:4px 0px;
+	
+}
+
+#archive:hover{
+	background-color:#f5cd67;
+}
+
+#archive:active{
+	background-color:#f5cd67;
+	opacity:1;
+}
+
+#archiveline{
+	margin:-8px -8px;
+	width:100%;
+	height:464px;
+	background-color:#f5cd67;
+	position:absolute;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 1000ms;
+	opacity:0;
+}
+
+#archiveline:target{
+	background-color:#f5cd67;
+		z-index:1;
+		opacity:1;
+}
+
+#contact{
+	margin:8px 0px 0px 140px;
+	left:50%;
+	width:100px;
+	height:31px;
+	background-color:#bad5e8;
+	position:absolute;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 300ms;
+	opacity:.7;
+	z-index:3;
+	text-decoration:none;
+	color:white;
+	text-align:center;
+	font-size:25px;
+	font-family:"Myriad Pro","Helvetica Neue","Helvetica";
+	font-style:bold;
+	padding:4px 0px;
+	
+}
+
+#contact:hover{
+	background-color:#1576bb;
+}
+
+#contact:active{
+	background-color:#1576bb;
+	opacity:1;
+}
+
+#contactline{
+	margin:-8px -8px;
+	width:100%;
+	height:464px;
+	background-color:#1576bb;
+	position:absolute;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 1000ms;
+	opacity:0;
+}
+
+#contactline:target{
+	background-color:#1576bb;
+		z-index:1;
+		opacity:1;
+}
+
+</style>
+
 <html>
+	<div id="gamesline"></div>
+	<div id="aboutline"></div>
+	<div id="archiveline"></div>
+	<div id="contactline"></div>
+<head>
+<TITLE>peagames</TITLE>
+<LINK REL="SHORTCUT ICON" HREF="./pea.ico">
+</head>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="peagames.github.com : " />
+<body>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>peagames.github.com</title>
-  </head>
+<div id="top"></div>
+<div id="btm"></div>
+<div id="lne"></div>
+<a href "" id="home"></div>
+<a href="#gamesline" id="games">games</div>
+<a href="#aboutline" id="about">about</div>
+<a href="#archiveline" id="archive">archive</div>
+<a href="#contactline" id="contact">contact</div>
 
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/andresmtzc/peagames.github.com">View on GitHub</a>
-
-          <h1 id="project_title">peagames.github.com</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/andresmtzc/peagames.github.com/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/andresmtzc/peagames.github.com/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">peagames.github.com maintained by <a href="https://github.com/andresmtzc">andresmtzc</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+</body>
 </html>
